@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head class="no-skrollr">
 	<meta charset="utf-8">
 
@@ -7,214 +7,94 @@
 
 	<title>量子回溯(QHHT)</title>
 
-	<style type="text/css">
-
-		html,body {margin: 0px; padding: 0px}
-
-		html {					
-			background-image: url(img/ladder.jpg);
-			background-repeat: no-repeat; 
-		    background-position: center;
-			background-attachment: fixed;
-		    background-position: center;
-		    background-color: black;
-		}
-
-		#skrollr-body {
-			min-height: 5000px;
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			width: 100%;
-			overflow-x: hidden; 
-		}
-
-		h1 {
-			font-size: 72px;
-		}
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
-<body id="skrollr-body"
-			 data-0 = "background-color:hsla(113, 80%, 40%, 0.8);
-			 			color:hsl(255, 80%, 10%)"
+<body>
+	<a name="head"></a>
 
-			 data-end = "background-color:hsla(10, 50%, 10%, 0.2);
-			 			color:hsl(113, 100%, 85%)">
+<nav>
+	<a href = "#head">回頁首</a>
+</nav>
 
-	    <h1 data-0 = "position: fixed;  transform:rotate(0deg); top: 350px; left:50px;"
-			data-500 = "top: 350px; transform:rotate(-36deg);"
-			data-1000 = "top: 500px; transform:rotate(-36deg);"
-			data-3000 = "top:-1200px; left:1000px; transform:rotate(0deg)"
-			data-7000 = "top:100px; left:60px;">
-				量子回溯
-			</h1>
+<div id ="intro">
+	<h1>量子催眠回溯</h1>
 
+	<h3>Quantum Hypnotic Healing Therapy</h3>
+	<h4>Orignally invented by Doreles Canon</h4>
+	
+	<div class = "know">
+		<h4>流程</h4>
+		<ul>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
 
-				<a style = "position: absolute; cursor: pointer;
-							top: 350px; left:45%"
+	<div class = "note">
+		<h4>特點</h4>
+		<ul>
+			<li>全程錄音，對案主負責</li>
+			<li>實體會面，不使用遠距</li>
+			<li>每個人的潛意識都有自己生命課題的解答，療癒師只是協助連結，不會介入</li>
+		</ul>
+	</div>
+	
+</div>
 
-					onclick = "s.animateTo(18000, {duration : 30000})"> 
-					<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"> 
-				</a>
+<div id = "main" ng-init = "switch = 1; start = 0">
 
-
-
-
-
-			  <h1
-			 	data-0 = "position:relative; transform: rotate(12deg)" 
-			 	data-1000 = "position: fixed; top:500px; left:2000px;"
-			 	data-2000 = "top:500px; left:500px;"
-			 	data-3000 = "top:300px; left:-450px;"
-					 >連結生命</h1>
-
-			 <h1
-			 	data-0 = "position:relative; transform: rotate(12deg)" 
-			 	data-2000 = "position: fixed; top:400px; left:2000px;"
-			 	data-3000 = "top:400px; left:500px;"
-			 	data-4000 = "top:200px; left:-450px;"
-					 >醒悟</h1>
-
-			 <h1
-			 	data-0 = "position:relative; transform: rotate(12deg)" 
-			 	data-3000 = "position: fixed; top:500px; left:2000px;"
-			 	data-4000 = "fixed; top:500px; left:500px;"
-			 	data-5000 = "top:-200px; left:200px;"
-			 >超越</h1>
-
-
-			 <h1
-			 	data-0 = "position:relative; color: blue; transform: rotate(36deg)" 
-			 	data-4000 = "position: fixed; top:400px; left:2000px;"
-			 	data-5000 = "ptop:400px; left:500px;"
-			 	data-6000 = "top:-200px; left:200px;"
-			 >體會</h1>
-
-
-<!-- 說明 -->
-
-		<h1 data-0 = "position: fixed; top:-700px; left:500px;"
-			data-6000 = "top:-700px; left:500px;"
-			data-7000 = "top:300px; left:500px;"
-			data-8000 = "top:300px; left:-500px;"
-			>
-			訪談
-		</h1>
-
-		<h1 data-0 = "position: fixed; top:-700px; left:500px;"
-			data-7000 = "top:-700px; left:500px;"
-			data-8000 = "top:300px; left:500px;"
-			data-9000 = "top:300px; left:-500px;">
-			放鬆
-		</h1>
+	<div id = "control-port">
+		<a ng-click = "switch = 1; start = 1"
+			ng-class = "{active: switch == 1}">第一篇</a>
+		<a ng-click = "switch = 2; start = 1"
+			ng-class = "{active: switch == 2}">第二篇</a>
+	</div>
+	
+	<div class = "recorder"
+			ng-class = "{open: switch == 2 && start,
+						move1: switch == 1}">
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis tellus, tincidunt at malesuada ac, varius vitae est. Nunc interdum non purus et vehicula. Praesent non sem id mauris imperdiet laoreet ut nec neque. Sed lobortis eros ipsum, non ultrices turpis pharetra quis. Mauris consectetur dui id tempor dignissim. Cras viverra ultricies lacus, non varius nunc elementum ac. Fusce pellentesque id lorem quis blandit. Donec eget enim interdum, pulvinar enim quis, mollis elit. Duis tincidunt nunc a ante porta pellentesque. Ut ullamcorper blandit purus eget fringilla. Aliquam dictum, diam quis aliquet molestie, augue felis mollis sem, vitae tincidunt libero ipsum ac elit. Etiam scelerisque ullamcorper suscipit. Sed placerat, quam fermentum posuere ultricies, enim turpis faucibus lectus, nec hendrerit tortor nunc at libero. Duis posuere nisl eu nunc imperdiet, id rutrum lectus pellentesque. Quisque tempor sapien urna.
+</p><p>
+		Aliquam blandit, diam blandit interdum vehicula, enim augue vulputate massa, sodales sodales ante lectus vel ipsum. Pellentesque quis risus hendrerit, consequat tellus eget, aliquam mi. Praesent neque massa, semper et eros id, mollis elementum risus. Nullam ut placerat erat, vitae commodo velit. Morbi et neque ante. Integer in neque porta tellus lobortis pulvinar ut et augue. Suspendisse ultricies ligula in cursus semper. Vestibulum elementum at risus id ultricies. Donec facilisis suscipit tincidunt. Proin non dui mattis, molestie odio eget, auctor urna.
+</p><p>
+		Integer at mi ex. In ultricies hendrerit odio ut fringilla. Etiam tempus, est id iaculis sagittis, massa odio ornare ex, eu consequat velit orci sit amet dolor. Sed id tempus mi, et aliquam magna. Donec suscipit augue quis velit efficitur rhoncus. Ut sed nisi id nunc fermentum interdum. Praesent congue tortor vitae sodales rhoncus. Curabitur nec metus consequat, viverra mi vel, tincidunt diam. Nam et leo ut nibh ullamcorper blandit nec vel nulla. Sed magna erat, efficitur vel viverra eget, viverra malesuada nulla. Nunc tincidunt cursus auctor. Curabitur efficitur faucibus sapien non pretium.
+</p><p>
+		Duis sagittis cursus mauris, vitae laoreet magna molestie vel. Maecenas tempus arcu ut ex fermentum, in lobortis diam cursus. Suspendisse potenti. Phasellus id nulla vitae odio blandit efficitur eget at leo. Vivamus blandit volutpat diam in rutrum. Pellentesque luctus convallis lectus, et dictum massa scelerisque a. Nam tortor ipsum, convallis lobortis mi id, tincidunt vestibulum dui. Mauris pellentesque eget ipsum ac condimentum. Curabitur porta bibendum quam in porta. Sed euismod, erat eget posuere egestas, sem est consequat urna, quis faucibus purus lacus vitae eros. Suspendisse suscipit urna ut libero aliquam, non aliquet dui laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p><p>
+		Vivamus eros mauris, sagittis non consectetur et, commodo vitae massa. Pellentesque semper scelerisque ante. In euismod dui nisl, pretium molestie mauris ultricies a. Donec tincidunt efficitur tincidunt. Phasellus sollicitudin euismod aliquam. Duis dapibus auctor feugiat. Quisque vel malesuada purus. Vivamus lobortis nisi in posuere posuere. Donec accumsan, nulla ut consequat finibus, augue purus maximus nunc, eget porta velit nunc sed turpis. Sed ac nisi sit amet purus tempus porta in at nunc. Ut lacinia accumsan dolor nec finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin luctus interdum nisl, sed sollicitudin eros facilisis et. Nunc eget ligula ultricies, aliquam lacus condimentum, efficitur est. Nullam tempus dictum justo, vel cursus eros laoreet sit amet. Vivamus sed maximus ipsum.
+	</p>
+	</div>
 
 
-		<h1 data-0 = "position: fixed; top:-700px; left:500px;"
-			data-8000 = "top:-700px; left:500px;"
-			data-9000 = "top:300px; left:500px;"
-			data-10000 = "top:300px; left:-500px;">
-			深沉
-		</h1>
+	<div class = "recorder"
+			ng-class = "{
+						invis: !start,
+						open: switch == 1,
+						move2: switch == 2 && start}">
+	<p>
+		第二篇Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis tellus, tincidunt at malesuada ac, varius vitae est. Nunc interdum non purus et vehicula. Praesent non sem id mauris imperdiet laoreet ut nec neque. Sed lobortis eros ipsum, non ultrices turpis pharetra quis. Mauris consectetur dui id tempor dignissim. Cras viverra ultricies lacus, non varius nunc elementum ac. Fusce pellentesque id lorem quis blandit. Donec eget enim interdum, pulvinar enim quis, mollis elit. Duis tincidunt nunc a ante porta pellentesque. Ut ullamcorper blandit purus eget fringilla. Aliquam dictum, diam quis aliquet molestie, augue felis mollis sem, vitae tincidunt libero ipsum ac elit. Etiam scelerisque ullamcorper suscipit. Sed placerat, quam fermentum posuere ultricies, enim turpis faucibus lectus, nec hendrerit tortor nunc at libero. Duis posuere nisl eu nunc imperdiet, id rutrum lectus pellentesque. Quisque tempor sapien urna.
+</p><p>
+		Aliquam blandit, diam blandit interdum vehicula, enim augue vulputate massa, sodales sodales ante lectus vel ipsum. Pellentesque quis risus hendrerit, consequat tellus eget, aliquam mi. Praesent neque massa, semper et eros id, mollis elementum risus. Nullam ut placerat erat, vitae commodo velit. Morbi et neque ante. Integer in neque porta tellus lobortis pulvinar ut et augue. Suspendisse ultricies ligula in cursus semper. Vestibulum elementum at risus id ultricies. Donec facilisis suscipit tincidunt. Proin non dui mattis, molestie odio eget, auctor urna.
+</p><p>
+		Integer at mi ex. In ultricies hendrerit odio ut fringilla. Etiam tempus, est id iaculis sagittis, massa odio ornare ex, eu consequat velit orci sit amet dolor. Sed id tempus mi, et aliquam magna. Donec suscipit augue quis velit efficitur rhoncus. Ut sed nisi id nunc fermentum interdum. Praesent congue tortor vitae sodales rhoncus. Curabitur nec metus consequat, viverra mi vel, tincidunt diam. Nam et leo ut nibh ullamcorper blandit nec vel nulla. Sed magna erat, efficitur vel viverra eget, viverra malesuada nulla. Nunc tincidunt cursus auctor. Curabitur efficitur faucibus sapien non pretium.
+</p><p>
+		Duis sagittis cursus mauris, vitae laoreet magna molestie vel. Maecenas tempus arcu ut ex fermentum, in lobortis diam cursus. Suspendisse potenti. Phasellus id nulla vitae odio blandit efficitur eget at leo. Vivamus blandit volutpat diam in rutrum. Pellentesque luctus convallis lectus, et dictum massa scelerisque a. Nam tortor ipsum, convallis lobortis mi id, tincidunt vestibulum dui. Mauris pellentesque eget ipsum ac condimentum. Curabitur porta bibendum quam in porta. Sed euismod, erat eget posuere egestas, sem est consequat urna, quis faucibus purus lacus vitae eros. Suspendisse suscipit urna ut libero aliquam, non aliquet dui laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p><p>
+		Vivamus eros mauris, sagittis non consectetur et, commodo vitae massa. Pellentesque semper scelerisque ante. In euismod dui nisl, pretium molestie mauris ultricies a. Donec tincidunt efficitur tincidunt. Phasellus sollicitudin euismod aliquam. Duis dapibus auctor feugiat. Quisque vel malesuada purus. Vivamus lobortis nisi in posuere posuere. Donec accumsan, nulla ut consequat finibus, augue purus maximus nunc, eget porta velit nunc sed turpis. Sed ac nisi sit amet purus tempus porta in at nunc. Ut lacinia accumsan dolor nec finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin luctus interdum nisl, sed sollicitudin eros facilisis et. Nunc eget ligula ultricies, aliquam lacus condimentum, efficitur est. Nullam tempus dictum justo, vel cursus eros laoreet sit amet. Vivamus sed maximus ipsum.
+		</p>
+	</div>
+</div>
 
 
-		<h1 data-0 = "position: fixed; top:-700px; left:500px;"
-			data-9000 = "top:-700px; left:500px;"
-			data-10000 = "top:300px; left:500px;"
-			data-11000 = "top:300px; left:-600px;">
-			回到源頭
-		</h1>
-
-
-		<h1 data-0 = "position: fixed; top:-700px; left:500px;"
-			data-10000 = "top:-700px; left:500px;"
-			data-11000 = "top:300px; left:500px;"
-			data-12000 = "top:300px; left:-600px;">
-			大我療癒
-		</h1>
-
-
-		<h1 data-0 = "position: fixed; top:-700px; left:500px;"
-			data-11000 = "top:-700px; left:500px;"
-			data-12000 = "top:300px; left:500px;"
-			data-13000 = "top:300px; left:-600px;">
-			瞭解更多
-		</h1>
-
-
-		<h1 data-0 = "position: fixed; top:-700px; left:500px;"
-			data-12000 = "top:-700px; left:500px;"			
-			data-13000 = "top:300px; left:500px;"
-			data-14000 = "top:300px; left:16px;"
-			data-15000 = "top:300px; left:72px;"
-			data-16000 = "top:300px; left:272px;">
-			
-			<a href = "http://www.cosmicgarden.com.tw/books-soulspeak.htm">
-
-				<img src = "http://media.taaze.tw/showLargeImage.html?sc=11100679180" />
-			</a>
-		</h1>
-
-
-		<h1 data-0 = "position: fixed; top:-700px; left:500px;"
-			data-15000 = "top:-700px; left:500px;"			
-			data-16000 = "top:300px; left:500px;"
-			data-17000 = "top:300px; left:16px;"
-			data-18000 = "top:300px; left:72px;">
-			<a href = "http://www.cosmicgarden.com.tw/books-keeper.htm">
-				<img src = "http://pic.pimg.tw/alienonearth/e0af0034bb663a5d6b4876989079cee6.jpg"/>
-			</a>
-		</h1>
+<script type="text/javascript" src = "bower_components/angular/angular.min.js">
+	
+</script>
 
 
 
-
-				
-		
-
-
-	<script type="text/javascript" src="dist/skrollr.min.js"></script>
-
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="dist/skrollr.ie.min.js"></script>
-	<![endif]-->
-
-	<script type="text/javascript">
-	var s = skrollr.init(
-		{
-		    smoothScrolling: true,
-		}
-	);
-
-
-
-	//Or you may call the init-function at some other point. You could for example use an image preloader.
-	/*
-	window.onload = function() {
-		//Calling it twice doesn't hurt.
-		skrollr.init();
-	};
-	*/
-	</script>
 </body>
 
 </html>
 
-
-
-
-<!--	<h1 data-0 = "position: fixed; top:-700px; left:500px;"
-			data-9000 = "top:-700px; left:500px;"
-			data-10000 = "top:300px; left:500px;"
-			data-11000 = "Top:300px; left:-500px;">
-			無暗示無介入
-		</h1>
-
-
-		<h1 data-0 = "position: fixed; top:-700px; left:500px;"
-			data-10000 = "top:-700px; left:500px;"
-			data-11000 = "top:300px; left:500px;"
-			data-12000 = "top:300px; left:-600px;">
-			全程錄音送還案主
-		</h1> -->

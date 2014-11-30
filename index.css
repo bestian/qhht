@@ -1,0 +1,149 @@
+html,body {margin: 0px; padding: 0px}
+
+html {					
+	background-image: url(img/ladder.jpg);
+	background-repeat: no-repeat; 
+    background-position: center;
+	background-attachment: fixed;
+    background-position: center;
+	background-color: hsla(270,100%,25%,0.5);
+    color: white;
+}
+
+body {
+	text-align: center;
+}
+
+nav {
+	position: fixed;
+	bottom: 10px;
+	left: 0%;
+}
+
+nav > a {
+	height: 50px;
+	margin-left: 10px; 
+	font-size: 16px;
+	color: hsla(160, 80%, 80%,1);
+}
+
+#intro, 
+#main {
+	display: inline-block;
+	max-width: 600px;
+	width: 85%;
+}
+
+#main {
+	max-width: none;
+	width: 100%;
+}
+
+
+#intro {
+	background-color: hsla(60,100%,60%,0.5);
+	color: hsla(270,100%,25%,1);
+}
+
+#intro > div {
+	max-width: 250px;
+}
+
+#intro ul {
+}
+
+#intro ul li {
+	margin-top: 10px;
+	font-size: 18px;
+	text-align: left;
+}
+
+#main {
+	padding-top: 30px;
+	background-color: hsla(270,100%,25%,0.5);
+}
+
+#main > #control-port {
+	background-color: hsla(270,100%,25%,0.5);
+	display: inline-block;
+	padding: 5%;
+	border-radius: 15px;
+	moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	
+}
+
+#main > #control-port > a {
+	color: hsla(0,0%,85%,1);
+	cursor: pointer;
+	padding: 10px;
+	width: 150px;
+	border-radius: 15px;
+	moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+#main > #control-port > a:hover,
+#main > #control-port > a:active,
+#main > #control-port > a.active {
+	background-color: hsla(50, 75%, 50%, 0.7); 
+	color: white;
+}
+
+
+#intro > div,
+#main > div {
+	display: inline-block;
+	width: 45%;
+	padding: 1%;
+	vertical-align: top;
+	font-size: 18px;
+}
+
+
+
+#main > .recorder > p {
+	padding: 5px;
+	font-family: "Architects Daughter","Helvetica Neue",Helvetica,Arial,"微軟正黑體",sans-serif;
+	line-height: 160%;
+	text-align: left;
+}
+
+
+.open {
+	opacity: 0;
+	transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+}
+
+.move1 {
+	position: relative;
+	left: 25%;
+	transition: all 2s ease;
+	-webkit-transition: all 2s ease;
+	-moz-transition: all 2s ease;
+	-o-transition: all 2s ease;
+}
+
+
+.move2 {
+	position: relative;
+	left: -25%;
+	transition: all 2s ease;
+	-webkit-transition: all 2s ease;
+	-moz-transition: all 2s ease;
+	-o-transition: all 2s ease;
+}
+
+.invis {
+	opacity: 0;
+	transition: all 0s ease;
+	-webkit-transition: all 0s ease;
+	-moz-transition: all 0s ease;
+	-o-transition: all 0s ease;
+}
