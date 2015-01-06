@@ -1,0 +1,184 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+$b: hsla(240,100%,50%,0.6);
+$p: hsla(270,100%,25%,0.86);
+$y: hsla(60,100%,60%,0.6);
+
+$f: 22px;
+
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}
+
+html,body {margin: 0px; padding: 0px}
+
+html {					
+	background-image: url(../img/ladder.jpg);
+	background-repeat: no-repeat; 
+    background-position: center;
+	background-attachment: fixed;
+    background-position: center;
+	background-color: hsla(270,100%,25%,0.5);
+    color: white;
+}
+
+body {
+	text-align: center;
+}
+
+nav {
+	position: fixed;
+	bottom: 10px;
+	left: 15px;
+	a {
+		height: 50px;
+		margin-left: 10px; 
+		font-size: 16px;
+		color: hsla(160, 80%, 80%,1);
+	}
+}
+
+#ribbon {
+	position: fixed;
+	left: 50%;
+	height: 100%;
+	$d:400px;
+	.left,.right {
+		@include background-image(linear-gradient(
+			$y, fade-in($y,0.4) 50%, $y));
+		position: absolute;
+		z-index: 888888;
+		width: 15px;
+		height: 100%;
+	}
+	.left {
+		left: -$d;
+	}
+	.right {		
+		left: $d - 17px;
+	}
+
+}
+
+#intro, 
+#main {
+	display: inline-block;
+	max-width: none;
+	width: 100%;
+}
+
+
+#intro {
+	@include background-image(linear-gradient(
+		$b, $b 70%, $p));
+	color: white;
+	padding-bottom: 50px;
+	h1 {
+		font-size: 36px;
+		padding: 15px;
+	}
+	h3 {
+		font-size: 24px;
+		padding: 5px;
+	}
+	h4 {
+		font-size: 20px;
+		padding: 5px;
+	}
+	div {
+		max-width: 420px;
+		p {
+			font-size: $f - 4px;
+			text-align: left;
+			margin-top: 15px;
+			line-height: 162%;
+			color: gold;
+		}
+		a {
+			text-decoration: none;
+			color: mix(white, purple);
+		}
+	}
+}
+
+
+#main {
+	background-color: $p;
+}
+
+#main > #control-port {
+	display: inline-block;
+	padding: 5%;
+	border-radius: 15px;
+	moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+
+	a {
+		color: hsla(0,0%,85%,1);
+		cursor: pointer;
+		padding: 10px;
+		width: 150px;
+		border-radius: 15px;
+		moz-border-radius: 15px;
+		-webkit-border-radius: 15px;
+
+		&:hover,&:active,&.active {
+			background-color: hsla(50, 75%, 50%, 0.7); 
+			color: white;
+		}
+	}	
+}
+
+
+#intro > div,
+#main > div {
+	display: inline-block;
+	width: 45%;
+	padding: 1%;
+	vertical-align: top;
+	font-size: 18px;
+}
+
+
+
+#main > .recorder > p {
+	padding: 5px;
+	font-size: $f;
+	margin-top:$f;
+	font-family: "Architects Daughter","Helvetica Neue",Helvetica,Arial,"微軟正黑體",sans-serif;
+	line-height: 162%;
+	text-align: left;
+	color:gold;
+}
+
+
+.open {
+	opacity: 0;
+	@include transform(rotateY(180deg));
+	@include transition(all 1s ease);
+}
+
+.move1 {
+	position: relative;
+	left: 25%;
+	@include transition(all 2s ease);
+}
+
+
+.move2 {
+	position: relative;
+	left: -25%;
+	@include transition(all 2s ease);
+}
+
+.invis {
+	opacity: 0;
+	@include transition(all 0s ease);
+}

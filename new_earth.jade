@@ -1,0 +1,48 @@
+html(ng-app='')
+head
+	meta(charset='utf-8')
+	meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+
+	title
+		|量子回溯(QHHT)
+
+	link(href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css")
+	link(href="./stylesheets/print.css" media="print" rel="stylesheet" type="text/css")
+	//if IE
+		link(href='./stylesheets/ie.css', media='screen, projection', rel='stylesheet', type='text/css')
+
+
+body 
+
+
+	a(name="head")
+
+	nav
+		a(href = "#head")
+			|回家
+
+	div#ribbon
+		div.left
+		div.right
+
+	div#intro
+		include ./includes/qhht-intro.jade
+
+	div#main(ng-init = "switch = 1; start = 0")
+		div#control-port
+			a(ng-click = "switch = 1; start = 1"
+				ng-class = "{active: switch == 1}")
+				|第一篇
+			a(ng-click = "switch = 2; start = 1"
+				ng-class = "{active: switch == 2}")
+				|第二篇
+
+		div.recorder(ng-class = "{open: switch == 2 && start, move1: switch == 1}")
+			include ./includes/have-no-fear.jade
+
+		div.recorder(ng-class = "{	invis: !start, open: switch == 1, move2: switch == 2 && start}")
+			include ./includes/universal-order.jade
+
+
+
+	script(type="text/javascript" src = "bower_components/angular/angular.min.js")
