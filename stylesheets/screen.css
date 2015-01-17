@@ -179,7 +179,7 @@ nav a {
   font-size: 18px;
   text-align: left;
   margin-top: 15px;
-  line-height: 162%;
+  line-height: 120%;
   color: gold;
 }
 /* line 104, ../sass/screen.scss */
@@ -233,12 +233,16 @@ nav a {
   font-size: 22px;
   margin-top: 22px;
   font-family: "Architects Daughter","Helvetica Neue",Helvetica,Arial,"微軟正黑體",sans-serif;
-  line-height: 162%;
+  line-height: 120%;
   text-align: left;
   color: gold;
 }
+/* line 160, ../sass/screen.scss */
+#main > .recorder > p:first-letter {
+  margin-left: -44px;
+}
 
-/* line 162, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 .open {
   opacity: 0;
   -moz-transform: rotateY(180deg);
@@ -251,7 +255,7 @@ nav a {
   transition: all 1s ease;
 }
 
-/* line 168, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .move1 {
   position: relative;
   left: 25%;
@@ -261,7 +265,7 @@ nav a {
   transition: all 2s ease;
 }
 
-/* line 175, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 .move2 {
   position: relative;
   left: -25%;
@@ -271,7 +275,7 @@ nav a {
   transition: all 2s ease;
 }
 
-/* line 181, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .invis {
   opacity: 0;
   -moz-transition: all 0s ease;

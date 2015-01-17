@@ -98,7 +98,7 @@ nav {
 			font-size: $f - 4px;
 			text-align: left;
 			margin-top: 15px;
-			line-height: 162%;
+			line-height: 120%;
 			color: gold;
 		}
 		a {
@@ -153,9 +153,13 @@ nav {
 	font-size: $f;
 	margin-top:$f;
 	font-family: "Architects Daughter","Helvetica Neue",Helvetica,Arial,"微軟正黑體",sans-serif;
-	line-height: 162%;
+	line-height: 120%;
 	text-align: left;
 	color:gold;
+
+	&:first-letter {
+		margin-left : -$f * 2; 
+	}
 }
 
 
