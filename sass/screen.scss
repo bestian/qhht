@@ -10,7 +10,7 @@ $b: hsla(240,100%,50%,0.6);
 $p: hsla(270,100%,25%,0.86);
 $y: hsla(60,100%,60%,0.6);
 
-$f: 22px;
+$f: 18px;
 
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
@@ -35,13 +35,14 @@ body {
 
 nav {
 	position: fixed;
-	bottom: 10px;
-	left: 15px;
+	top: 20px;
+	left: 100px;
+	background-color: gray;
+	padding:10px;
 	a {
 		height: 50px;
-		margin-left: 10px; 
 		font-size: 16px;
-		color: hsla(160, 80%, 80%,1);
+		color: hsla(160, 80%, 20%,1);
 	}
 }
 
@@ -95,15 +96,19 @@ nav {
 	div {
 		max-width: 420px;
 		p {
-			font-size: $f - 4px;
+			padding: 10px;
+			@include border-radius($f);
+			background-color: lighten(blue, 25);
+			font-size: $f;
+			font-family: sans-serif, Arial;
 			text-align: left;
 			margin-top: 15px;
-			line-height: 120%;
-			color: gold;
+			line-height: 121%;
+			color: black;
 		}
 		a {
 			text-decoration: none;
-			color: mix(white, purple);
+			color: darken,(purple, 10);
 		}
 	}
 }
@@ -149,15 +154,18 @@ nav {
 
 
 #main > .recorder > p {
-	padding: 5px;
+	padding: 10px;
+	padding-left: 10px + 2 * $f;
+	@include border-radius($f);
+	background-color: lighten(blue, 25);
 	font-size: $f;
 	margin-top:$f;
 	font-family: "Architects Daughter","Helvetica Neue",Helvetica,Arial,"微軟正黑體",sans-serif;
-	line-height: 120%;
+	line-height: 121%;
 	text-align: left;
-	color:gold;
+	color: black;
 
-	&:first-letter {
+	&:not(.start):first-letter {
 		margin-left : -$f * 2; 
 	}
 }
@@ -185,4 +193,12 @@ nav {
 .invis {
 	opacity: 0;
 	@include transition(all 0s ease);
+}
+
+@media screen and (max-width: 600px) {
+	nav {
+		display: none;
+	}
+
+
 }
