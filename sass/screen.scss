@@ -8,9 +8,14 @@
 
 $b: hsla(240,100%,50%,0.6);
 $p: hsla(270,100%,25%,0.86);
+$p1: hsla(270,100%,25%,0);
+$p2: hsla(270,100%,75%,0.86);
 $y: hsla(60,100%,60%,0.6);
 
+
 $f: 18px;
+
+$color: gold;
 
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
@@ -65,8 +70,8 @@ nav {
 	.right {		
 		left: $d - 17px;
 	}
-
 }
+
 
 #intro, 
 #main {
@@ -104,7 +109,7 @@ nav {
 			text-align: left;
 			margin-top: 15px;
 			line-height: 121%;
-			color: black;
+			color: $color;
 		}
 		a {
 			text-decoration: none;
@@ -115,7 +120,11 @@ nav {
 
 
 #main {
-	background-color: $p;
+	position:relative;
+	z-index: 888889;
+	@include background-image(linear-gradient(
+		$p1, $p2 50%, $p2));
+	background-color: $p1;
 }
 
 #main > #control-port {
@@ -156,14 +165,13 @@ nav {
 #main > .recorder > p {
 	padding: 10px;
 	padding-left: 10px + 2 * $f;
-	@include border-radius($f);
-	background-color: lighten(blue, 25);
+	background-color: hsla(60,40%,75%,1);
 	font-size: $f;
-	margin-top:$f;
+	margin-top:0px;
 	font-family: "Architects Daughter","Helvetica Neue",Helvetica,Arial,"微軟正黑體",sans-serif;
 	line-height: 121%;
 	text-align: left;
-	color: black;
+	color: #333;
 
 	&:not(.start):first-letter {
 		margin-left : -$f * 2; 
