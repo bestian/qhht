@@ -4,7 +4,7 @@ head
 	meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
 
 	title
-		|量子回溯(QHHT)
+		| 量子回溯(QHHT)
 
 	link(href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css")
 	link(href="./stylesheets/print.css" media="print" rel="stylesheet" type="text/css")
@@ -13,19 +13,13 @@ head
 
 
 body 
-
-
 	a(name="head")
-
-
 	div#ribbon
 		div.left
 		div.right
-
-
 	div#intro
-	//-	include ./includes/qhht-intro-working.jade
-	//-	include ./includes/qhht-intro.jade
+		include ./includes/qhht-intro-working.pug
+	//-	include ./includes/qhht-intro.pug
 
 	div#main(ng-init = "switch = 1; start = 0")
 		div#control-port
@@ -37,10 +31,10 @@ body
 				|第二篇
 
 		div.recorder(ng-class = "{open: switch == 2 && start, move1: switch == 1}")
-			include ./includes/universal-order.jade
+			include ./includes/universal-order.pug
 
 		div.recorder(ng-class = "{	invis: !start, open: switch == 1, move2: switch == 2 && start}")
-			include ./includes/have-no-fear.jade
+			include ./includes/have-no-fear.pug
 
 
 

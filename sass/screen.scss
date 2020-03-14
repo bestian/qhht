@@ -53,22 +53,22 @@ nav {
 
 #ribbon {
 	position: fixed;
-	left: 50%;
-	height: 100%;
-	$d:400px;
-	.left,.right {
+	top: 0;
+	height: 100vh;
+	$d: 12vw;
+	.left, .right {
 		@include background-image(linear-gradient(
 			$y, fade-in($y,0.4) 50%, $y));
-		position: absolute;
+		position: fixed;
 		z-index: 888888;
 		width: 15px;
 		height: 100%;
 	}
 	.left {
-		left: -$d;
+		left: $d;
 	}
 	.right {		
-		left: $d - 17px;
+		right: $d;
 	}
 }
 

@@ -17,10 +17,17 @@
     <div class="left"></div>
     <div class="right"></div>
   </div>
-  <div id="intro"></div>
+  <div id="intro">
+    <h1>量子催眠回溯 {{test}}</h1>
+    <h3>Quantum Hypnotic Healing Therapy</h3>
+    <h4>Orignally invented by Doreles Canon</h4>
+    <div class="know">
+      <p>兩篇量子催眠回溯療法（QHHT）逐字稿<br/>與有緣人分享，<br/><br/>再次強調每個人都是獨一無二，<br/><br/>你有你正在尋找的一切答案。</p>
+    </div>
+  </div>
   <div id="main" ng-init="switch = 1; start = 0">
     <div id="control-port"><a ng-click="switch = 1; start = 1" ng-class="{active: switch == 1}">第一篇</a><a ng-click="switch = 2; start = 1" ng-class="{active: switch == 2}">第二篇</a></div>
-    <div ng-class="{open: switch == 2 &amp;&amp; start, move1: switch == 1}" class="recorder">
+    <div class="recorder" ng-class="{open: switch == 2 &amp;&amp; start, move1: switch == 1}">
       <p class="start">量子催眠分享：宇宙的秩序</p>
       <p class="start">日期：103年3月下旬</p>
       <p class="start">體驗者：W </p>
@@ -256,7 +263,7 @@
       <p>W：對。</p>
       <p>(連結SC私人問題清單略過)</p>
     </div>
-    <div ng-class="{	invis: !start, open: switch == 1, move2: switch == 2 &amp;&amp; start}" class="recorder">
+    <div class="recorder" ng-class="{	invis: !start, open: switch == 1, move2: switch == 2 &amp;&amp; start}">
       <p class="start">回溯分享-無畏無懼</p>
       <p class="start">體驗者：O<br/>引導者：Hsinyi Chiu（H）<br/>潛意識：SC</p>
       <p class="start">回溯畫面：</p>
@@ -622,5 +629,5 @@
       <p>O 的問題清單，雖然覺得SC的回應很好、或許有其他人會有收獲，但在雙方共識下決定留給當事人，不特別貼出來。畢竟每個人、每個時刻需要的不盡相同，就連同一人，SC每次給的建議也不見得一樣。世界上充滿各種資訊、訊息，就讓我們回到當下的呼吸吧，這也是我對自己的期許^^</p>
     </div>
   </div>
-  <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 </body>
