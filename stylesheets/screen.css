@@ -130,14 +130,14 @@ nav a {
 }
 /* line 67, ../sass/screen.scss */
 #ribbon .left {
-  left: 12vw;
+  left: 5vw;
 }
 /* line 70, ../sass/screen.scss */
 #ribbon .right {
-  right: 12vw;
+  right: 5vw;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 #intro,
 #main {
   display: inline-block;
@@ -145,7 +145,7 @@ nav a {
   width: 100%;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 #intro {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDBmZiIgc3RvcC1vcGFjaXR5PSIwLjYiLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iIzAwMDBmZiIgc3RvcC1vcGFjaXR5PSIwLjYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0MDAwODAiIHN0b3Atb3BhY2l0eT0iMC44NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -156,26 +156,26 @@ nav a {
   color: white;
   padding-bottom: 50px;
 }
-/* line 89, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 #intro h1 {
   font-size: 36px;
   padding: 15px;
 }
-/* line 93, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 #intro h3 {
   font-size: 24px;
   padding: 5px;
 }
-/* line 97, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 #intro h4 {
   font-size: 20px;
   padding: 5px;
 }
-/* line 101, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 #intro div {
   max-width: 420px;
 }
-/* line 103, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 #intro div p {
   padding: 10px;
   background-color: #8080ff;
@@ -185,18 +185,18 @@ nav a {
   line-height: 121%;
   color: #333;
 }
-/* line 112, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 #intro div a {
   text-decoration: none;
   color: darken, purple, 10;
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 #main {
   background-color: rgba(64, 0, 128, 0.86);
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 #main > #control-port {
   display: inline-block;
   padding: 5%;
@@ -204,7 +204,7 @@ nav a {
   moz-border-radius: 15px;
   -webkit-border-radius: 15px;
 }
-/* line 131, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 #main > #control-port a {
   color: #d9d9d9;
   cursor: pointer;
@@ -214,13 +214,13 @@ nav a {
   moz-border-radius: 15px;
   -webkit-border-radius: 15px;
 }
-/* line 140, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 #main > #control-port a:hover, #main > #control-port a:active, #main > #control-port a.active {
   background-color: rgba(223, 191, 32, 0.7);
   color: white;
 }
 
-/* line 148, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 #intro > div,
 #main > div {
   display: inline-block;
@@ -230,7 +230,7 @@ nav a {
   font-size: 18px;
 }
 
-/* line 159, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 #main > .recorder > p {
   padding: 10px;
   padding-left: 46px;
@@ -242,12 +242,12 @@ nav a {
   text-align: left;
   color: #333;
 }
-/* line 170, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 #main > .recorder > p:not(.start):first-letter {
   margin-left: -36px;
 }
 
-/* line 176, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 .open {
   opacity: 0;
   -moz-transform: rotateY(180deg);
@@ -260,7 +260,7 @@ nav a {
   transition: all 1s ease;
 }
 
-/* line 182, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .move1 {
   position: relative;
   left: 25%;
@@ -270,7 +270,7 @@ nav a {
   transition: all 2s ease;
 }
 
-/* line 189, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 .move2 {
   position: relative;
   left: -25%;
@@ -280,18 +280,11 @@ nav a {
   transition: all 2s ease;
 }
 
-/* line 195, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 .invis {
   opacity: 0;
   -moz-transition: all 0s ease;
   -o-transition: all 0s ease;
   -webkit-transition: all 0s ease;
   transition: all 0s ease;
-}
-
-@media screen and (max-width: 600px) {
-  /* line 201, ../sass/screen.scss */
-  nav {
-    display: none;
-  }
 }

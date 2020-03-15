@@ -55,7 +55,7 @@ nav {
 	position: fixed;
 	top: 0;
 	height: 100vh;
-	$d: 12vw;
+	$d: 5vw;
 	.left, .right {
 		@include background-image(linear-gradient(
 			$y, fade-in($y,0.4) 50%, $y));
@@ -71,7 +71,6 @@ nav {
 		right: $d;
 	}
 }
-
 
 #intro, 
 #main {
@@ -185,7 +184,6 @@ nav {
 	@include transition(all 2s ease);
 }
 
-
 .move2 {
 	position: relative;
 	left: -25%;
@@ -195,12 +193,4 @@ nav {
 .invis {
 	opacity: 0;
 	@include transition(all 0s ease);
-}
-
-@media screen and (max-width: 600px) {
-	nav {
-		display: none;
-	}
-
-
 }
