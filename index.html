@@ -1,6 +1,5 @@
-
-<html></html>
-<head>
+<html>
+  <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <title>量子催眠回溯療癒(QHHT)</title>
@@ -26,22 +25,22 @@
   link(href='./stylesheets/ie.css', media='screen, projection', rel='stylesheet', type='text/css')
   
   -->
-</head>
-<body ng-app="">
-  <a name="head"></a>
-  <div id="ribbon">
-    <div class="left"></div>
-    <div class="right"></div>
-  </div>
-  <div id="intro">
-    <h1>量子催眠回溯 {{test}}</h1>
-    <h3>Quantum Hypnotic Healing Therapy</h3>
-    <h4>Orignally invented by Doreles Canon</h4>
-    <div class="know">
-      <p>兩篇量子催眠回溯療法（QHHT）逐字稿<br/>與有緣人分享，<br/><br/>再次強調每個人都是獨一無二，<br/><br/>你有你正在尋找的一切答案。</p>
+  </head>
+  <body ng-app="">
+    <a name="head"></a>
+    <div id="ribbon">
+      <div class="left"></div>
+      <div class="right"></div>
     </div>
-  </div>
-  <div id="main" ng-init="switch = 1; start = 0">
+    <div id="intro">
+      <h1>量子催眠回溯 {{test}}</h1>
+      <h3>Quantum Hypnotic Healing Therapy</h3>
+      <h4>Orignally invented by Doreles Canon</h4>
+      <div class="know">
+      <p>兩篇量子催眠回溯療法（QHHT）逐字稿<br/>與有緣人分享，<br/><br/>再次強調每個人都是獨一無二，<br/><br/>你有你正在尋找的一切答案。</p>
+      </div>
+    </div>
+    <div id="main" ng-init="switch = 1; start = 0">
     <div id="control-port"><a ng-click="switch = 1; start = 1" ng-class="{active: switch == 1}">第一篇</a><a ng-click="switch = 2; start = 1" ng-class="{active: switch == 2}">第二篇</a></div>
     <div class="recorder" ng-class="{open: switch == 2 &amp;&amp; start, move1: switch == 1}">
       <p class="start">量子催眠分享：宇宙的秩序</p>
@@ -278,8 +277,8 @@
       <p>H：你從這個經驗中，學到眾生平等、去影響，還有秩序就是愛。 </p>
       <p>W：對。</p>
       <p>(連結SC私人問題清單略過)</p>
-    </div>
-    <div class="recorder" ng-class="{	invis: !start, open: switch == 1, move2: switch == 2 &amp;&amp; start}">
+      </div>
+      <div class="recorder" ng-class="{	invis: !start, open: switch == 1, move2: switch == 2 &amp;&amp; start}">
       <p class="start">回溯分享-無畏無懼</p>
       <p class="start">體驗者：O<br/>引導者：Hsinyi Chiu（H）<br/>潛意識：SC</p>
       <p class="start">回溯畫面：</p>
@@ -643,7 +642,8 @@
       <p>這是2014年10月上旬進行的QHHT，因為再過一個多月即將生產，有很長一段時間不會做量子催眠的服務，正想著這些，這次的QHHT就傳達回到自我完整的直接與重要，覺得宇宙真是太好了，讓學習服務的人一起在這過程被SC照顧著，一起在這“完整”裡感受，帶著這份平靜與愛，回到生活去應用、活出來。</p>
       <p>經體驗者同意、開始著手打文字檔這天，正好與朵洛莉絲老師過世（美國時間）是同一天。心裡的感受，對照文字檔的訊息，感覺宇宙一直在工作著、安排著...很...博大？（不知道怎麼形容這感覺）</p>
       <p>O 的問題清單，雖然覺得SC的回應很好、或許有其他人會有收獲，但在雙方共識下決定留給當事人，不特別貼出來。畢竟每個人、每個時刻需要的不盡相同，就連同一人，SC每次給的建議也不見得一樣。世界上充滿各種資訊、訊息，就讓我們回到當下的呼吸吧，這也是我對自己的期許^^</p>
+      </div>
     </div>
-  </div>
-  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-</body>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  </body>
+</html>

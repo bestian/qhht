@@ -1,56 +1,56 @@
 html
-head
-	meta(charset='utf-8')
-	meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
-	meta(property='og:title', content='量子催眠回溯療癒(QHHT)')
-	meta(property='og:description', content='兩篇量子催眠回溯療法（QHHT）逐字稿與有緣人分享，再次強調每個人都是獨一無二，你有你正在尋找的一切答案。')
-	meta(property="og:updated_time", content="20202-08-15T11:37:13+00:00")
-	meta(property='og:type', content='article')
-	meta(property='og:image', content='https://bestian.github.io/qhht/img/ladder.jpg')
-	meta(property='og:image:type', content='image/jpg' )
-	meta(property='og:image:width', content='800' )
-	meta(property='og:image:height', content='1018' )
-	link(rel='apple-touch-icon', sizes='180x180', href='./apple-touch-icon.png')
-	link(rel='icon', type='image/png', sizes='32x32', href='./favicon-32x32.png')
-	link(rel='icon', type='image/png', sizes='16x16', href='./favicon-16x16.png')
-	link(rel='manifest', href='./site.webmanifest')
-	link(rel='mask-icon', href='./safari-pinned-tab.svg' color='#5bbad5')
-	meta(name='msapplication-TileColor', content='#da532c')
-	meta(name='theme-color', content='#ffffff')
+	head
+		meta(charset='utf-8')
+		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+		meta(property='og:title', content='量子催眠回溯療癒(QHHT)')
+		meta(property='og:description', content='兩篇量子催眠回溯療法（QHHT）逐字稿與有緣人分享，再次強調每個人都是獨一無二，你有你正在尋找的一切答案。')
+		meta(property="og:updated_time", content="20202-08-15T11:37:13+00:00")
+		meta(property='og:type', content='article')
+		meta(property='og:image', content='https://bestian.github.io/qhht/img/ladder.jpg')
+		meta(property='og:image:type', content='image/jpg' )
+		meta(property='og:image:width', content='800' )
+		meta(property='og:image:height', content='1018' )
+		link(rel='apple-touch-icon', sizes='180x180', href='./apple-touch-icon.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='./favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='./favicon-16x16.png')
+		link(rel='manifest', href='./site.webmanifest')
+		link(rel='mask-icon', href='./safari-pinned-tab.svg' color='#5bbad5')
+		meta(name='msapplication-TileColor', content='#da532c')
+		meta(name='theme-color', content='#ffffff')
 
-	title
-		| 量子回溯(QHHT)
+		title
+			| 量子回溯(QHHT)
 
-	link(href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css")
-	link(href="./stylesheets/print.css" media="print" rel="stylesheet" type="text/css")
-	//if IE
-		link(href='./stylesheets/ie.css', media='screen, projection', rel='stylesheet', type='text/css')
-
-
-body(ng-app='') 
-	a(name="head")
-	div#ribbon
-		div.left
-		div.right
-	div#intro
-		include ./includes/qhht-intro-working.pug
-	//-	include ./includes/qhht-intro.pug
-
-	div#main(ng-init = "switch = 1; start = 0")
-		div#control-port
-			a(ng-click = "switch = 1; start = 1"
-				ng-class = "{active: switch == 1}")
-				|第一篇
-			a(ng-click = "switch = 2; start = 1"
-				ng-class = "{active: switch == 2}")
-				|第二篇
-
-		div.recorder(ng-class = "{open: switch == 2 && start, move1: switch == 1}")
-			include ./includes/universal-order.pug
-
-		div.recorder(ng-class = "{	invis: !start, open: switch == 1, move2: switch == 2 && start}")
-			include ./includes/have-no-fear.pug
+		link(href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css")
+		link(href="./stylesheets/print.css" media="print" rel="stylesheet" type="text/css")
+		//if IE
+			link(href='./stylesheets/ie.css', media='screen, projection', rel='stylesheet', type='text/css')
 
 
+	body(ng-app='') 
+		a(name="head")
+		div#ribbon
+			div.left
+			div.right
+		div#intro
+			include ./includes/qhht-intro-working.pug
+		//-	include ./includes/qhht-intro.pug
 
-	script(type="text/javascript" src = "bower_components/angular/angular.min.js")
+		div#main(ng-init = "switch = 1; start = 0")
+			div#control-port
+				a(ng-click = "switch = 1; start = 1"
+					ng-class = "{active: switch == 1}")
+					|第一篇
+				a(ng-click = "switch = 2; start = 1"
+					ng-class = "{active: switch == 2}")
+					|第二篇
+
+			div.recorder(ng-class = "{open: switch == 2 && start, move1: switch == 1}")
+				include ./includes/universal-order.pug
+
+			div.recorder(ng-class = "{	invis: !start, open: switch == 1, move2: switch == 2 && start}")
+				include ./includes/have-no-fear.pug
+
+
+
+		script(type="text/javascript" src = "bower_components/angular/angular.min.js")
