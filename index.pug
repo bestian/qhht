@@ -13,14 +13,6 @@ html
 		link(rel='apple-touch-icon', sizes='180x180', href='./apple-touch-icon.png')
 		link(rel='icon', type='image/png', sizes='32x32', href='./favicon-32x32.png')
 		link(rel='icon', type='image/png', sizes='16x16', href='./favicon-16x16.png')
-		link(rel='manifest', href='./site.webmanifest')
-		link(rel='mask-icon', href='./safari-pinned-tab.svg' color='#5bbad5')
-		meta(name='msapplication-TileColor', content='#da532c')
-		meta(name='theme-color', content='#ffffff')
-
-		title
-			| 量子回溯(QHHT)
-
 		link(href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css")
 		link(href="./stylesheets/print.css" media="print" rel="stylesheet" type="text/css")
 		//if IE
@@ -34,23 +26,35 @@ html
 			div.right
 		div#intro
 			include ./includes/qhht-intro-working.pug
-		//-	include ./includes/qhht-intro.pug
+		// -	include ./includes/qhht-intro.pug
 
-		div#main(ng-init = "switch = 1; start = 0")
+		div#main(ng-init = "switch = 1")
 			div#control-port
-				a(ng-click = "switch = 1; start = 1"
+				a(ng-click = "switch = 1"
 					ng-class = "{active: switch == 1}")
 					|第一篇
-				a(ng-click = "switch = 2; start = 1"
+				a(ng-click = "switch = 2"
 					ng-class = "{active: switch == 2}")
 					|第二篇
+				a(ng-click = "switch = 3"
+					ng-class = "{active: switch == 3}")
+					|第三篇
 
-			div.recorder(ng-class = "{open: switch == 2 && start, move1: switch == 1}")
+			div.recorder(ng-show="switch == 1")
 				include ./includes/universal-order.pug
 
-			div.recorder(ng-class = "{	invis: !start, open: switch == 1, move2: switch == 2 && start}")
+			div.recorder(ng-show="switch == 2")
 				include ./includes/have-no-fear.pug
 
+			div.recorder(ng-show="switch == 3")
+				include ./includes/a-dream.pug
 
 
 		script(type="text/javascript" src = "bower_components/angular/angular.min.js")
+		link(rel='manifest', href='./site.webmanifest')
+		link(rel='mask-icon', href='./safari-pinned-tab.svg' color='#5bbad5')
+		meta(name='msapplication-TileColor', content='#da532c')
+		meta(name='theme-color', content='#ffffff')
+
+		title
+			| 量子回溯(QHHT)
