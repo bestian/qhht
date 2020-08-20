@@ -31,13 +31,17 @@ html
 			div#control-port
 				a(ng-click = "switch = 1"
 					ng-class = "{active: switch == 1}")
-					|第一篇
+					|第一篇:宇宙的秩序
+				br
+				br
 				a(ng-click = "switch = 2"
 					ng-class = "{active: switch == 2}")
-					|第二篇
+					|第二篇:無畏無懼
+				br
+				br
 				a(ng-click = "switch = 3"
 					ng-class = "{active: switch == 3}")
-					|第三篇
+					|第三篇:夢的創造者
 
 			div.recorder(ng-show="switch == 1")
 				include ./includes/universal-order.pug
