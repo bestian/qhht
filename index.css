@@ -45,7 +45,7 @@ nav > a {
 }
 
 #intro > div {
-	max-width: 250px;
+	max-width: 380px;
 }
 
 #intro ul li,
@@ -66,7 +66,6 @@ nav > a {
 	border-radius: 15px;
 	moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
-	
 }
 
 #main > #control-port > a {
@@ -90,10 +89,10 @@ nav > a {
 #intro > div,
 #main > div {
 	display: inline-block;
-	width: 45%;
+	width: 55%;
 	padding: 1%;
 	vertical-align: top;
-	font-size: 18px;
+	font-size: 22px;
 }
 
 
@@ -103,6 +102,7 @@ nav > a {
 	font-family: "Architects Daughter","Helvetica Neue",Helvetica,Arial,"微軟正黑體",sans-serif;
 	line-height: 160%;
 	text-align: left;
+	font-size: 18px;
 }
 
 
@@ -143,3 +143,5 @@ nav > a {
 	-moz-transition: all 0s ease;
 	-o-transition: all 0s ease;
 }
+
+

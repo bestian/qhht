@@ -194,3 +194,21 @@ nav {
 	opacity: 0;
 	@include transition(all 0s ease);
 }
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  #intro > div, #main > div {
+    width: 80% !important;
+  }
+  #control-port {
+      display: inline-block;
+    padding: 0;
+    margin: 0 !important;
+    width: 100vw !important;
+  }
+  .recorder p {
+    text-align: left;
+    font-size: 22px !important;
+    line-height: 1.62;
+  }
+}
