@@ -326,9 +326,11 @@ nav a {
   }
   #ribbon .left {
     left: 0;
+    max-width: 1.2vw;
   }
   /* line 70, ../sass/screen.scss */
   #ribbon .right {
     right: 0;
+    max-width: 1.2vw;
   }
 }
