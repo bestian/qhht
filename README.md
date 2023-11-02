@@ -9,3 +9,9 @@ QHHT
 
 Licence:
 https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hant
+
+# 開發環境：
+
+angular 1  x  bower  x  pug  x scss
+
+(應該是用了compass)
