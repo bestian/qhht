@@ -109,6 +109,17 @@ nav a {
   color: #0a5c41;
 }
 
+#head {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 260px;
+  height: 10vh;
+  min-height: 199px;
+  max-height: 299px;
+}
+
 /* line 54, ../sass/screen.scss */
 #ribbon {
   position: fixed;

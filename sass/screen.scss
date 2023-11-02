@@ -51,6 +51,17 @@ nav {
 	}
 }
 
+#head {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 260px;
+  height: 10vh;
+  min-height: 199px;
+  max-height: 299px;
+}
+
 #ribbon {
 	position: fixed;
 	top: 0;

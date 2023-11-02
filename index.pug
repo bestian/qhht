@@ -20,6 +20,12 @@ html
 
 	body(ng-app='') 
 		a(name="head")
+		div#big-or-small
+			a(ng-click="size++; size = size % 3")
+				img#looking-glass-small(ng-show="size == 0", src="./glass-small")
+				img#looking-glass-med(ng-show="size == 1", src="./glass-med")
+				img#looking-glass-big(ng-show="size == 2", src="./glass-big")
+
 		div#ribbon
 			div.left
 			div.right
