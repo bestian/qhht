@@ -169,6 +169,12 @@ nav {
 	&:not(.start):first-letter {
 		margin-left : -$f * 2; 
 	}
+
+	.recorder p {
+      text-align: left;
+      font-size: 26px;
+      line-height: 1.62;
+    }
 }
 
 
@@ -196,12 +202,12 @@ nav {
 }
 
 /* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1020px) {
   #intro > div, #main > div {
     width: 80% !important;
   }
   #control-port {
-      display: inline-block;
+    display: inline-block;
     padding: 0;
     margin: 0 !important;
     width: 100vw !important;

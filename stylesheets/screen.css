@@ -247,6 +247,12 @@ nav a {
   margin-left: -36px;
 }
 
+.recorder p {
+  text-align: left;
+  font-size: 26px;
+  line-height: 1.62;
+}
+
 /* line 175, ../sass/screen.scss */
 .open {
   opacity: 0;
@@ -289,13 +295,13 @@ nav a {
   transition: all 0s ease;
 }
 
-/* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
+/* On screens that are 810px or less, set the background color to olive */
+@media screen and (max-width: 1020px) {
   #intro > div, #main > div {
     width: 80% !important;
   }
   #control-port {
-      display: inline-block;
+    display: inline-block;
     padding: 0;
     margin: 0 !important;
     width: 100vw !important;
