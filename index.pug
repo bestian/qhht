@@ -37,9 +37,9 @@ html
 				a(ng-click = "switch = 2"
 					ng-class = "{active: switch == 2}")
 					|第二篇:無畏無懼
-				br
-				br
-				a(ng-click = "switch = 3"
+				//br
+				//br
+				//a(ng-click = "switch = 3"
 					ng-class = "{active: switch == 3}")
 					|第三篇:夢的創造者
 
@@ -49,7 +49,7 @@ html
 			div.recorder(ng-show="switch == 2")
 				include ./includes/have-no-fear.pug
 
-			div.recorder(ng-show="switch == 3")
+			//div.recorder(ng-show="switch == 3")
 				include ./includes/a-dream.pug
 
 
